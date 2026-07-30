@@ -1,0 +1,8 @@
+/ {
+    behaviors {
+        blueboot: blueboot {
+            compatible = "zmk,behavior-blueboot";
+            #binding-cells = <0>;
+        };
+    };
+};

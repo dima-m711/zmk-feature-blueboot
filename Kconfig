@@ -1,0 +1,19 @@
+config ZMK_FEATURE_BLUEBOOT
+    bool "Blueboot BLE DFU behavior"
+    default y
+    depends on DT_HAS_ZMK_BEHAVIOR_BLUEBOOT_ENABLED
+    help
+      Enables the Blueboot behavior, which reboots an Adafruit nRF52
+      bootloader into Nordic Secure DFU mode over Bluetooth.
+
+if ZMK_FEATURE_BLUEBOOT
+
+config ZMK_BLUEBOOT_MAGIC
+    hex "Blueboot GPREGRET value"
+    default 0xa8
+    help
+      Magic value consumed by the Adafruit nRF52 bootloader to enter BLE OTA
+      mode. Do not change this unless the installed bootloader uses a custom
+      value.
+
+endif

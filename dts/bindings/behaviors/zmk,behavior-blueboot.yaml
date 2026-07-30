@@ -1,0 +1,5 @@
+description: Reboot an Adafruit nRF52 bootloader into BLE DFU mode
+
+compatible: "zmk,behavior-blueboot"
+
+include: zero_param.yaml
